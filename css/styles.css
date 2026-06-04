@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wgt@300;400;500&display=swap');
+:root {
+    --bg: #08090f;
+    --accent: #d4af37;
+    --glow: rgba(212, 175, 55, 0.15)
+    --bg-card: #13151f;
+    --border: rgba(255, 255, 255, 0.08)
+    --text-primary: #e8e4da;
+    --text-secondary: #9a9484;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+[data-theme="zeus"] {
+
+    --bg: #08090f;
+    --accent: #d4af37;
+    --glow: rgba(212, 175, 55, 0.15);
+}
+[data-theme="poseidon"] {
+    --bg: #060d14;
+    --accent: #00b4d8;
+    --glow: rgba(0, 180, 216, 0.15)
+}
+[data-theme="hades"] {
+    --bg: #0a060d;
+    --accent: #9b59b6;
+    --glow: rgba(155, 89, 182, 0.15);
+}
+body {
+    background: var(--bg);
+    color: #e8e4da;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.7;
+    transition: background 0.8s ease;
+}
+.hero {
+    text-align: center;
+    padding: 120px 24px 80px;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+}
+.hero-pre {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.4em;
+    color: var(--accent);
+    font-size: 14px;
+}
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(48px, 10vw, 90px);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 80px var(--glow);
+    margin: 10px 0;
+}
+.hero-sub {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #9a9484;
+}
+.dioses {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px 100px;
+}
+.dioses h2 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 28px;
+    color: #e8e4da;
+    margin-bottom: 40px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    justify-content: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 20px;
+    background: #13151f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    color: #e8e4da;
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px var(--glow);
+}
+.card-symbol {
+    font-size: 36px;
+    margin-bottom: 14px;
+}
+.card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: var(--accent);
+    margin-bottom: 6px;
+}
+.card p{
+    font-style: italic;
+    color: #9a9484;
+    font-size: 15px;
+}
+footer{
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: #5a5548;
+}
+/* ===== RESET DE ENLACES ===== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    background: rgba(8, 9, 15, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-size: 16px;
+}
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+.nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* ===== HERO DEL DIOS ===== */
+.god-hero {
+    text-align: center;
+    padding: 80px 24px 60px;
+    background: radial-gradient(ellipse at 50% 0%, var(--glow), transparent 70%);
+}
+.nav-back {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+.nav-back:hover {
+    color: var(--accent);
+}
+.god-hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(40px, 8vw, 72px);
+    font-weight: 900;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 80px var(--glow);
+}
+.god-hero-epithet {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
+    margin: 16px 0;
+}
+.god-hero-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 19px;
+    color: var(--text-secondary);
+}
+
+/* ===== CONTENIDO DEL DIOS ===== */
+.god-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+.god-section {
+    margin-bottom: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+}
+.god-section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+    color: var(--accent);
+    margin-bottom: 24px;
+    letter-spacing: 0.05em;
+}
+.god-text p {
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+.god-text strong {
+    color: var(--text-primary);
+}
+
+/* ===== CITAS ===== */
+.quote-block {
+    margin: 30px 0;
+    padding: 24px 30px;
+    border-left: 3px solid var(--accent);
+    background: var(--bg-card);
+}
+.quote-block blockquote {
+    font-style: italic;
+    font-size: 20px;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.quote-block cite {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+}
+
+/* ===== ATRIBUTOS ===== */
+.attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px;
+}
+.attribute-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+}
+.attribute-item span:first-child {
+    font-size: 32px;
+}
+
+/* ===== BOTÓN SECUNDARIO ===== */
+.btn-secondary {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    padding: 12px 24px;
+    border: 1px solid var(--accent);
+    transition: background 0.3s, color 0.3s;
+}
+.btn-secondary:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* ===== FOOTER DIOSES ===== */
+.footer {
+    text-align: center;
+    padding: 50px 24px;
+    border-top: 1px solid var(--border);
+}
+.footer-logo {
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.3em;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.footer-sub {
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+.footer-credits {
+    font-size: 13px;
+    color: #5a5548;
+}
