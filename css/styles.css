@@ -29,6 +29,11 @@
     --accent: #9b59b6;
     --glow: rgba(155, 89, 182, 0.15);
 }
+[data-theme="atenea"] {
+    --bg: #090a08;
+    --accent: #8E9B7A;
+    --glow: rgba(142, 155, 122, 0.15);
+}
 body {
     background: var(--bg);
     color: #e8e4da;
